@@ -2,13 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Music Player</title>
-    <link rel="stylesheet" href="style.css">
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/03576150a2.js" crossorigin="anonymous"></script>
     <!-- <i class='fas fa-volume-up' style='font-size:24px;color:white'></i> 
+    <i class='fas fa-volume-down'></i>
     <i class='fas fa-volume-mute' style='font-size:24px;color:white'></i>
     <i class='fas fa-pause'></i>
     <i class='fas fa-play'></i>
@@ -18,6 +19,54 @@
 </head>
 
 <body>
+    <div class="container">
+        <div class="music-player">
+            <div class="player">
+                <img src="/images/record.jpg" alt="Record" class="record" />
+                <h2 id="title">Song Name</h2>
+                <div class="slidecontainer">
+                    <i class="fas fa-volume-down"></i>
+                    <input type="range" min="0" max="100" value="50" class="slider" />
+                    <i class="fas fa-volume-up"></i>
+                </div>
+                <div class="controls">
+                    <button class="previous" id="previous">
+                        <i class="fas fa-step-backward"></i>
+                    </button>
+                    <button class="play-pause" id="play-pause">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <button class="next" id="next">
+                        <i class="fas fa-step-forward"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="playlist">
+                <h2>Playlist</h2>
+                <ul class="song-list">
+                    <li data-src="/music/Royals.mp3" data-name="Royals" data-index="0">
+                        <span>Royals</span><span>03:20</span>
+                    </li>
+                    <li data-src="/music/We Don't Talk Anymore.mp3" data-name="We Don't Talk Anymore" data-index="1">
+                        <span>We Don't Talk Anymore</span><span>03:50</span>
+                    </li>
+                    <li data-src="/music/Perfect.mp3" data-name="Perfect" data-index="2">
+                        <span>Perfect</span><span>04:39</span>
+                    </li>
+                    <li data-src="/music/One Direction.mp3" data-name="One Direction" data-index="3">
+                        <span>One Direction-Perfect</span><span>03:48</span>
+                    </li>
+                    <li data-src="/music/On & On.mp3" data-name="On & On" data-index="4">
+                        <span>On & On</span><span>03:28</span>
+                    </li>
+                    <li data-src="/music/7 rings.mp3" data-name="7 rings" data-index="5">
+                        <span>7 rings</span><span>03:04</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <script src="/script.js"></script>
 </body>
 
