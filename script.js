@@ -17,17 +17,18 @@ function loadAudio() {
   songHeading = songListItems[songIndex].getAttribute("data-name");
   title.innerText = songHeading;
 
-  for (i = 0; i < songListItems.length; i++) {
+  for (let i = 0; i < songListItems.length; i++) {
     songListItems[i].classList.remove("active");
   }
   songList.getElementsByTagName("li")[songIndex].classList.add("active");
 }
 
 function loadSongs() {
-  let songs = songList.getElementsByTagName("li");
-  for (i = 0; i < songs.length; i++) {
+  let songs = songList.getElementsByTagName("li");  
+  for (let i = 0; i < songs.length; i++) {
     songArray.push(songs[i].getAttribute("data-src"));
   }
+//   console.log(songArray);
   loadAudio();
 }
 loadSongs();
@@ -84,6 +85,7 @@ prevBtn.addEventListener("click", function(){
 
 songList.addEventListener("click", function(e){
     songIndex = e.target.closest("li").getAttribute("data-index");
+    //console.log(e.target.closest("li"));
     loadAudio();
     playAudio();
 });

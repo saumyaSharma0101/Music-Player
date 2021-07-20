@@ -10,18 +10,22 @@ body {
   display: flex;
   width: 100%;
   height: 100%;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  background-color: teal;
+  /* background-color: teal; */
+  background-image: url("/images/bg2.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 .music-player {
   display: flex;
   flex-direction: row;
   max-height: 450px;
   width: 800px;
+  margin-right: 200px;
 }
 .player {
-  background: #e9c46a;
+  background: rgb(150, 37, 55);
   padding: 3em;
   display: flex;
   flex-direction: column;
@@ -64,7 +68,8 @@ body {
   align-items: center;
 }
 .slidecontainer i {
-  color: #264653;
+  /* color: #264653; */
+  color: lightcoral;
   font-size: 16px;
 }
 .slider {
@@ -139,7 +144,8 @@ body {
   border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #e9c46a;
+  /* background: #e9c46a; */
+  background: lightcoral;
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
